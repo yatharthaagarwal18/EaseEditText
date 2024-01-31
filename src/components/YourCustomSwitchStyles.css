@@ -1,0 +1,56 @@
+/* YourCustomSwitchStyles.css */
+
+/* Custom style for the switch container */
+.custom-switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.custom-switch-container.text-light {
+  color: white;
+}
+
+.custom-switch-container.text-dark {
+  color: black;
+}
+
+/* Custom style for the checkbox input */
+.custom-switch-input {
+  display: none; /* Hide the default checkbox */
+}
+
+/* Custom style for the switch label */
+.custom-switch-label {
+  margin-left: 10px; /* Adjust spacing between switch and label */
+}
+
+/* Custom style for the switch track (background) */
+.custom-switch-track {
+  width: 40px; /* Adjust the width of the switch track */
+  height: 20px; /* Adjust the height of the switch track */
+  background-color: #ffffff; /* Default background color when off */
+  border-radius: 10px; /* Adjust the border radius for a rounded appearance */
+  position: relative;
+}
+
+/* Custom style for the switch thumb (indicator) */
+.custom-switch-thumb {
+  width: 20px; /* Adjust the width of the switch thumb */
+  height: 20px; /* Adjust the height of the switch thumb */
+  background-color: #c8c5c5; /* Default background color when off */
+  border-radius: 50%; /* Create a circular appearance */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+/* Custom style for the checked state of the switch */
+.custom-switch-input:checked + .custom-switch-track .custom-switch-thumb {
+  transform: translateX(20px); /* Move the thumb to the right when checked */
+}
+
+/* Custom style for the switch track when on */
+.custom-switch-input:checked + .custom-switch-track {
+  background-color: #3c91d6;
+}
